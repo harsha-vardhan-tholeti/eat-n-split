@@ -34,7 +34,6 @@ function SplitBill({ friends, toggleSelect, setFriends }) {
     e.preventDefault();
 
     const friendToUpdate = friends.find((friend) => friend.id === toggleSelect);
-    console.log(friendToUpdate);
 
     if (friendToUpdate) {
       const prevMoney = friendToUpdate.money || 0;
@@ -53,7 +52,6 @@ function SplitBill({ friends, toggleSelect, setFriends }) {
         return friend;
       });
 
-      console.log(updatedFriends);
       setFriends(updatedFriends);
       localStorage.setItem("friends", JSON.stringify(updatedFriends));
       setBill({
