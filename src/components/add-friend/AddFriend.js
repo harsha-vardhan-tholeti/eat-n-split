@@ -2,7 +2,10 @@ import { useState } from "react";
 import Button from "../../utils/button/Button";
 
 function AddFriend({ setFriends }) {
-  const [friend, setFriend] = useState({ name: "", imageURL: "" });
+  const [friend, setFriend] = useState({
+    name: "",
+    imageURL: "https://i.pravatar.cc/64",
+  });
 
   const updateFriend = (e) => {
     const { name, value } = e.target;
@@ -20,7 +23,7 @@ function AddFriend({ setFriends }) {
       localStorage.setItem("friends", JSON.stringify(updatedFriends));
       return updatedFriends;
     });
-    setFriend({ name: "", imageURL: "" });
+    setFriend({ name: "", imageURL: "https://i.pravatar.cc/64" });
   };
 
   return (

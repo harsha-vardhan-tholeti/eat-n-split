@@ -37,7 +37,7 @@ function App() {
               />
             ))}
             {!toggleAddFriend && (
-              <div className="flex justify-end mr-6 my-4">
+              <div className="flex justify-end mr-3 my-4">
                 <Button onClick={handleAddFriendToggle}>Add Friend</Button>
               </div>
             )}

@@ -8,11 +8,11 @@ function Friend({ friend, toggleSelect, setToggleSelect, bills }) {
 
   return (
     <div className="flex justify-center items-center p-4 hover:bg-[#fff4e6] rounded">
-      <div className="mr-6 basis-2/12">
+      <div className="mr-6 basis-4/12">
         <img
           className="rounded-full"
           src={
-            friend.imageURL
+            friend.imageURL !== "https://i.pravatar.cc/64"
               ? friend.imageURL
               : `https://i.pravatar.cc/64?${friend.id}`
           }
